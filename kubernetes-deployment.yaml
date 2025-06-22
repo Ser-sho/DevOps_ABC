@@ -1,0 +1,12 @@
+---
+- name:
+  hosts: kubernetes
+  user: ubuntu
+
+  tasks:
+  - name: create a deployment
+    command: kubectl apply -f edureka-deploy.yaml
+
+  - name: create a service
+    command: kubectl apply -f edureka-service.yaml
+
